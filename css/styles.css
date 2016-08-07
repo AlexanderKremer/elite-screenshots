@@ -86,6 +86,7 @@ body ::-webkit-input-placeholder {
   padding-left: 20px;
 }
 #home-page .upload-container h1 {
+  font-size: 28px;
   margin: 0;
   padding: 0;
 }
