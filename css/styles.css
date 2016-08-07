@@ -98,6 +98,58 @@ body ::-webkit-input-placeholder {
   text-decoration: underline;
 }
 
+#register-page h1 {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: #FF7100;
+}
+#register-page small {
+  font-family: "Sintony", Arial, sans-serif;
+  color: #FF7100;
+}
+#register-page .disclaimer {
+  padding-top: 20px;
+}
+#register-page .disclaimer a {
+  color: #FF7100;
+  text-decoration: underline;
+}
+
+.center-container .border-container {
+  border: 1px solid #FF7100;
+  padding: 20px;
+  margin: 125px 0;
+}
+.center-container .input-group {
+  margin: 0 auto;
+  line-height: 75px;
+}
+.center-container .input-group-field {
+  background-color: black;
+  border: 1px solid #FF7100;
+  color: #FF7100;
+}
+.center-container .input-group-field:focus {
+  background-color: black;
+  border: 1px solid #FF7100;
+  color: #FF7100;
+  -webkit-box-shadow: none;
+}
+.center-container .submit-button {
+  background-color: #FF7100;
+  border: 1px solid #FF7100;
+  color: black;
+  height: 40px;
+  padding: 0 15px 0 15px;
+  outline: none;
+  font-family: "Euro Caps", Arial, sans-serif;
+  text-transform: uppercase;
+}
+.center-container .submit-button:hover {
+  background-color: black;
+  color: #FF7100;
+  border: 1px solid #FF7100;
+}
+
 footer {
   border-top: 1px solid #FF7100;
 }

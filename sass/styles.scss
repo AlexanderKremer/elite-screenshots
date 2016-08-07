@@ -103,6 +103,63 @@ body {
 	}
 }
 
+#register-page {
+	h1 {
+		font-family: "Euro Caps", Arial, sans-serif;
+		color: #FF7100;
+	}
+	small {
+		font-family: "Sintony", Arial, sans-serif;
+		color: #FF7100;
+	}
+	.disclaimer {
+		padding-top: 20px;
+		a {
+			color: #FF7100;
+			text-decoration: underline;
+		}
+	}
+}
+
+// Bordered container for the Account, Register and Login page
+.center-container {
+		.border-container {
+		border: 1px solid #FF7100;
+		padding: 20px;
+		margin: 125px 0;
+	}
+	.input-group {
+		margin: 0 auto;
+		line-height: 75px;
+	}
+	.input-group-field {
+		background-color: black;
+		border: 1px solid #FF7100;
+		color: #FF7100;
+	}
+	.input-group-field:focus {
+		background-color: black;
+		border: 1px solid #FF7100;
+		color: #FF7100;
+		-webkit-box-shadow: none;
+	}	
+	.submit-button {
+		background-color: #FF7100;
+		border: 1px solid #FF7100;
+		color: black;
+		height: 40px;
+		padding: 0 15px 0 15px;
+		outline: none;
+		font-family: "Euro Caps", Arial, sans-serif;
+		text-transform: uppercase;
+	}
+	.submit-button:hover {
+		background-color: black;
+		color: #FF7100;
+		border: 1px solid #FF7100;
+	}
+}
+
 // Footer located in master.php
 footer {
 	border-top: 1px solid #FF7100;
