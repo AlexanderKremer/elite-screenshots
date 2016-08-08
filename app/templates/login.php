@@ -13,23 +13,26 @@
 	<div class="row align-center large-5 text-center">
 		<div class="border-container">
 		<h1>Requesting CMDR details</h1>
-			<form>
+			<form action="index.php?page=login" method="post">
 			  <div class="row align-center">
 			    <div class="large-6 columns large-centered">
-			      <label>
-			        <input type="text" placeholder="Username" class="input-group-field">
-			      </label>
+
+			        <input type="text" name="username" placeholder="Username" class="input-group-field">
+			  		<?php if( isset($usernameMessage) ) : ?>
+            			<p class="errors"> <?= $usernameMessage ?> </p>
+            		<?php endif; ?>
 
 			      <br>
 
-			      <label>
-			        <input type="text" placeholder="Password" class="input-group-field">
-			      </label>
+			        <input type="password" name="password" placeholder="Password" class="input-group-field">
+			      	<?php if( isset($passwordMessage) ) : ?>
+           				<p class="errors"> <?= $passwordMessage ?> </p>
+           			<?php endif; ?>
 			      
 			      <br>
 			    </div>
 			  </div>
-			  <input type="submit" class="submit-button" class="input-group-field">
+			  <input type="submit" name="login" class="submit-button input-group-field" value="Sign In">
 			</form>
 		</div>
 	</div>

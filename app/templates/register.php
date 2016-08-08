@@ -15,28 +15,28 @@
 
 		<h1>Enlist here</h1>
 
-			<form action="index.php?page=home" method="post">
+			<form action="index.php?page=register" method="post">
 
 			  <div class="row align-center">
 			    <div class="large-6 columns large-centered">
 
-			        <input type="text" placeholder="Username" class="input-group-field">
+			        <input type="text" name="username" class="input-group-field" placeholder="Username">
 			        <?php if( isset($usernameMessage) ) : ?>
-            			<p> <?= $usernameMessage ?> </p>
+            			<p class="errors"> <?= $usernameMessage ?> </p>
             		<?php endif; ?>
 
 			      <br>
 
-			        <input type="text" name="email" placeholder="Email" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>" class="input-group-field">
+			        <input type="text" name="email" placeholder="Email" class="input-group-field" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>">
 			        <?php if( isset($emailMessage) ) : ?>
-            			<p> <?= $emailMessage ?> </p>
+            			<p class="errors"> <?= $emailMessage ?> </p>
             		<?php endif; ?>
 
 			      <br>
 
-			      	<input type="password" name="password" placeholder="Password" class="input-group-field">
+			      	<input type="password" name="password" class="input-group-field" placeholder="Password">
 			      	<?php if( isset($passwordMessage) ) : ?>
-           				<p> <?= $passwordMessage ?> </p>
+           				<p class="errors"> <?= $passwordMessage ?> </p>
            			<?php endif; ?>
 
 			      <br>

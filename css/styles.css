@@ -113,6 +113,20 @@ body ::-webkit-input-placeholder {
   color: #FF7100;
   text-decoration: underline;
 }
+#register-page .errors {
+  margin: 0;
+  padding: 0;
+  color: #FF7100;
+}
+
+#login-page h1 {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: #FF7100;
+}
+#login-page ::-webkit-input-placeholder {
+  /* Chrome */
+  color: #ff7100;
+}
 
 .center-container .border-container {
   border: 1px solid #FF7100;
