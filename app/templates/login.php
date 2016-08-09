@@ -22,14 +22,11 @@
             			<p class="errors"> <?= $usernameMessage ?> </p>
             		<?php endif; ?>
 
-			      <br>
-
 			        <input type="password" name="password" placeholder="Password" class="input-group-field">
 			      	<?php if( isset($passwordMessage) ) : ?>
            				<p class="errors"> <?= $passwordMessage ?> </p>
            			<?php endif; ?>
 			      
-			      <br>
 			    </div>
 			  </div>
 			  <input type="submit" name="login" class="submit-button input-group-field" value="Sign In">

@@ -119,6 +119,9 @@ body {
 			text-decoration: underline;
 		}
 	}
+	.input-group-field {
+		margin: 10px 0;
+	}
 	// Error message styling for forms
 	.errors {
 		margin: 0;
@@ -128,6 +131,24 @@ body {
 }
 
 #login-page {
+	h1 {
+		font-family: "Euro Caps", Arial, sans-serif;
+		color: #FF7100;
+	}
+	::-webkit-input-placeholder { /* Chrome */
+  		color: #ff7100;
+	}
+	.input-group-field {
+		margin: 10px 0;
+	}
+	.errors {
+		margin: 0;
+		padding: 0;
+		color: #FF7100;
+	}
+}
+
+#account-page {
 	h1 {
 		font-family: "Euro Caps", Arial, sans-serif;
 		color: #FF7100;

@@ -113,6 +113,9 @@ body ::-webkit-input-placeholder {
   color: #FF7100;
   text-decoration: underline;
 }
+#register-page .input-group-field {
+  margin: 10px 0;
+}
 #register-page .errors {
   margin: 0;
   padding: 0;
@@ -124,6 +127,23 @@ body ::-webkit-input-placeholder {
   color: #FF7100;
 }
 #login-page ::-webkit-input-placeholder {
+  /* Chrome */
+  color: #ff7100;
+}
+#login-page .input-group-field {
+  margin: 10px 0;
+}
+#login-page .errors {
+  margin: 0;
+  padding: 0;
+  color: #FF7100;
+}
+
+#account-page h1 {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: #FF7100;
+}
+#account-page ::-webkit-input-placeholder {
   /* Chrome */
   color: #ff7100;
 }

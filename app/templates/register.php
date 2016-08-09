@@ -25,21 +25,16 @@
             			<p class="errors"> <?= $usernameMessage ?> </p>
             		<?php endif; ?>
 
-			      <br>
-
 			        <input type="text" name="email" placeholder="Email" class="input-group-field" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>">
 			        <?php if( isset($emailMessage) ) : ?>
             			<p class="errors"> <?= $emailMessage ?> </p>
             		<?php endif; ?>
-
-			      <br>
 
 			      	<input type="password" name="password" class="input-group-field" placeholder="Password">
 			      	<?php if( isset($passwordMessage) ) : ?>
            				<p class="errors"> <?= $passwordMessage ?> </p>
            			<?php endif; ?>
 
-			      <br>
 			    </div>
 			  </div>
 			  <input type="submit" name="new-account" class="submit-button input-group-field" value="Sign Up">
