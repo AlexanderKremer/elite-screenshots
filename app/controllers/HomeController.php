@@ -14,11 +14,9 @@ class HomeController extends PageController {
 
 		$allData = $this->getLatestUploads();
 
-		$data = [];
+		$this->data['allUploads'] = $allData;
 
-		$data['allUploads'] = $allData;
-
-		echo $this->plates->render('home', $data);
+		echo $this->plates->render('home', $this->data);
 
 	}
 
