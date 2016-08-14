@@ -21,9 +21,11 @@ class PostController extends PageController {
 
 		$postID = $this->dbc->real_escape_string( $_GET['postid']);
 
-		$sql = "SELECT title, description, image, created_at, updated_at
+		$sql = "SELECT title, description, image, created_at, updated_at, username
 				FROM uploads
-				WHERE id = $postID";
+				JOIN users
+				ON user_id = users.id
+				WHERE uploads.id = $postID";
 
 		$result = $this->dbc->query($sql);
 

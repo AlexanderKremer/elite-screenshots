@@ -19,7 +19,7 @@
 				<p>
 			        <?= $post['title']?>
 			    </p>
-			    <a href="">CMDR test</a>
+			    <a href="">CMDR <?= $post ['username']?></a>
 			    <p><?= $post['description'] ?></p>
 			    <ul>
 			    	<li>Created: <?= $post['created_at'] ?></li>
