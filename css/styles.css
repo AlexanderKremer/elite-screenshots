@@ -184,6 +184,120 @@ body ::-webkit-input-placeholder {
   border: 1px solid #FF7100;
 }
 
+#post-page h1 {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: #FF7100;
+}
+#post-page p {
+  color: #FF7100;
+}
+#post-page small {
+  color: #FF7100;
+}
+#post-page .post-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#post-page .picture-container {
+  padding: 0;
+  margin-left: 15px;
+  box-sizing: border-box;
+}
+#post-page .post-border {
+  border: 1px solid #FF7100;
+}
+#post-page .details-container {
+  background-color: #FF7100;
+  padding-left: 15px;
+}
+#post-page .details-container h1 {
+  margin: 0;
+  padding: 0;
+}
+#post-page .details-container p {
+  text-transform: uppercase;
+  font-size: 22px;
+  color: black;
+  padding-top: 10px;
+  margin: 0;
+}
+#post-page .details-container a {
+  color: black;
+  font-family: "Euro Caps", Arial, sans-serif;
+}
+#post-page .details-container a a:hover {
+  color: red;
+  text-decoration: underline;
+}
+#post-page section {
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 15px;
+  width: 22.5%;
+}
+#post-page .comments-container {
+  border: 1px solid #FF7100;
+  padding-left: 15px;
+  max-height: 980px;
+  overflow-y: scroll;
+  padding-right: 20px;
+}
+#post-page .comments-container article {
+  margin-bottom: 25px;
+}
+#post-page .comments-container p {
+  margin: 5px;
+  font-family: "Sintony", Arial, sans-serif;
+}
+#post-page .comments-container small {
+  font-size: 13px;
+  padding-left: 20px;
+  font-family: "Euro Caps", Arial, sans-serif;
+}
+#post-page .comments-container small a {
+  color: #FF7100;
+  font-family: "Euro Caps", Arial, sans-serif;
+}
+#post-page .comments-container small a a:hover {
+  text-decoration: underline;
+}
+#post-page .comments-container::-webkit-scrollbar {
+  width: 5px;
+  height: 50px;
+}
+#post-page .comments-container::-webkit-scrollbar-thumb {
+  background-color: #ff7100;
+}
+#post-page .add-comments-container {
+  margin-top: 15px;
+}
+#post-page textarea {
+  font-family: "Euro Caps", Arial, sans-serif;
+  background-color: black;
+  border: 1px solid #FF7100;
+  color: #FF7100;
+}
+#post-page .comment-button {
+  float: right;
+}
+#post-page .button {
+  background-color: #FF7100;
+  border: 1px solid #FF7100;
+  color: black;
+  height: 40px;
+  padding: 0 15px 0 15px;
+  outline: none;
+  font-family: "Euro Caps", Arial, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#post-page .button:hover {
+  background-color: black;
+  color: #FF7100;
+  border: 1px solid #FF7100;
+}
+
 footer {
   border-top: 1px solid #FF7100;
 }

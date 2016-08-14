@@ -14,12 +14,12 @@
 
     <?php foreach($allUploads as $item): ?>
       <article class="grid-item">
-        <a href="index.php?page=upload&uploadid=<?= $item['id'] ?>">
+        <a href="index.php?page=post&postid=<?= $item['id'] ?>">
           <img src="img/uploads/stream/<?= $item['image'] ?>" alt="">
         </a>
         <div class="upload-container">
           <h1>
-            <a href="index.php?page=upload&uploadid=<?= $item['id'] ?>">
+            <a href="index.php?page=post&postid=<?= $item['id'] ?>">
               <?= htmlentities($item['title']) ?>
             </a>
           </h1>

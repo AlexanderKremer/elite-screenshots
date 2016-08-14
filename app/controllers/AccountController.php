@@ -47,6 +47,17 @@ class AccountController extends PageController {
 			$totalErrors++;
 		}
 
+		
+
+		// if( in_array( $_FILES['image']['error'], [1,3,4] ) ) {
+		// 	$this->data['imageMessage'] = 'Image failed to upload';
+		// 	$totalErrors++;
+		// } elseif( !in_array( $_FILES['image']['type'], $this->acceptableImageTypes ) ) {
+		// 	$this->data['imageMessage'] = 'Must be an image (jpg, gif, png, tiff etc)';
+		// 	$totalErrors++;
+		// }
+
+
 		if( $totalErrors == 0 ) {
 
 			$title = $this->dbc->real_escape_string($title);
@@ -63,9 +74,9 @@ class AccountController extends PageController {
 			$this->dbc->query( $sql );
 
 			if( $this->dbc->affected_rows ) {
-				$this->data['postMessage'] = 'Success!';
+				$this->data['uploadMessage'] = 'Image uploaded Successfully!';
 			} else {
-				$this->data['postMessage'] = 'Something went wrong!';
+				$this->data['uploadMessage'] = 'Image failed to upload!';
 			}
 
 		}

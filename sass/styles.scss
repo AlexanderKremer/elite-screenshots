@@ -197,6 +197,129 @@ body {
 	}
 }
 
+#post-page {
+	h1 {
+		font-family: "Euro Caps", Arial, sans-serif;
+		color: #FF7100;
+	}
+	p {
+		color: #FF7100;
+	}
+	small {
+		color: #FF7100;
+	}
+	.post-container {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.picture-container {
+		
+		padding: 0;
+		margin-left: 15px;
+		box-sizing: border-box;
+	}
+	.post-border {
+		border: 1px solid #FF7100;
+	}
+
+	.details-container {
+		background-color: #FF7100;
+		padding-left: 15px;		
+		h1 {
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			text-transform: uppercase;
+			font-size: 22px;
+			color: black;
+			padding-top: 10px;
+			margin: 0;
+		}
+		a {
+			color: black;
+			font-family: "Euro Caps", Arial, sans-serif;
+			a:hover {
+				color: red;
+				text-decoration: underline;
+			}
+		}
+	}
+	section {
+		margin-bottom: 10px;
+		box-sizing: border-box;
+		padding: 0;
+		margin-right: 15px;
+		width: 22.5%;
+	}
+	.comments-container {
+		border: 1px solid #FF7100;
+		padding-left: 15px;
+		max-height: 980px;
+		overflow-y: scroll;
+		padding-right: 20px;
+		article {
+			margin-bottom: 25px;
+		}
+		p {
+			margin: 5px;
+			font-family: "Sintony", Arial, sans-serif;
+		}
+		small {
+			font-size: 13px;
+			padding-left: 20px;
+			font-family: "Euro Caps", Arial, sans-serif;
+			a {
+				color: #FF7100;
+				font-family: "Euro Caps", Arial, sans-serif;
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+	}
+	// Comment container scroll bar styling
+	.comments-container::-webkit-scrollbar {
+	    width: 5px;
+	    height: 50px;
+	   }
+	 
+	.comments-container::-webkit-scrollbar-thumb {
+	  background-color: #ff7100;
+	}
+
+	.add-comments-container {
+		margin-top: 15px;
+	}
+
+	textarea {
+		font-family: "Euro Caps", Arial, sans-serif;
+		background-color: black;
+		border: 1px solid #FF7100;
+		color: #FF7100;
+	}
+	.comment-button {
+		float: right;
+	}
+	.button {
+		background-color: #FF7100;
+		border: 1px solid #FF7100;
+		color: black;
+		height: 40px;
+		padding: 0 15px 0 15px;
+		outline: none;
+		font-family: "Euro Caps", Arial, sans-serif;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+	.button:hover {
+		background-color: black;
+		color: #FF7100;
+		border: 1px solid #FF7100;
+	}
+}
+
 // Footer located in master.php
 footer {
 	border-top: 1px solid #FF7100;
