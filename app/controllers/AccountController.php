@@ -47,7 +47,7 @@ class AccountController extends PageController {
 			$totalErrors++;
 		}
 
-		
+
 
 		// if( in_array( $_FILES['image']['error'], [1,3,4] ) ) {
 		// 	$this->data['imageMessage'] = 'Image failed to upload';
@@ -59,6 +59,8 @@ class AccountController extends PageController {
 
 
 		if( $totalErrors == 0 ) {
+
+			$manager = new ImageManager(array('driver' => 'imagick'));
 
 			$title = $this->dbc->real_escape_string($title);
 			$desc = $this->dbc->real_escape_string($desc);
