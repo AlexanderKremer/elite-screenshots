@@ -13,8 +13,9 @@
 <div class="post-container row expanded">
 	<div class="picture-container large-9 columns">
 		<div class="post-border">
-		<img src="img/uploads/original<?= $item['image']?>" alt="">
 
+			
+		<img src="img/uploads/original/<?= $post['image'] ?>" alt="">	
 			<div class="details-container">
 				<p>
 			        <?= $post['title']?>
