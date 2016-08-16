@@ -17,15 +17,15 @@
 			
 		<img src="img/uploads/original/<?= $post['image'] ?>" alt="">	
 			<div class="details-container">
-				<p>
+				<h2>
 			        <?= $post['title']?>
-			    </p>
+			    </h2>
 			    <a href="">CMDR <?= $post ['username']?></a>
 			    <p><?= $post['description'] ?></p>
-			    <ul>
+<!-- 			    <ul>
 			    	<li>Created: <?= $post['created_at'] ?></li>
 			    	<li>Updated: <?= $post['updated_at'] ?></li>
-			    </ul>
+			    </ul> -->
 			</div>
 		</div>
 			<div class="add-comments-container ">
@@ -44,71 +44,6 @@
 					<p>Test Comment</p>
 					<small>Written by: <a href="">Test</a></small>
 				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: Test</small>
-				</article>
-
 			</div>
 	</section>
 

@@ -184,10 +184,6 @@ body ::-webkit-input-placeholder {
   border: 1px solid #FF7100;
 }
 
-#post-page h1 {
-  font-family: "Euro Caps", Arial, sans-serif;
-  color: #FF7100;
-}
 #post-page p {
   color: #FF7100;
 }
@@ -210,13 +206,14 @@ body ::-webkit-input-placeholder {
   background-color: #FF7100;
   padding-left: 15px;
 }
-#post-page .details-container h1 {
+#post-page .details-container h2 {
+  font-family: "Euro Caps", Arial, sans-serif;
   margin: 0;
-  padding: 0;
 }
 #post-page .details-container p {
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 18px;
+  font-family: "Sintony", Arial, sans-serif;
   color: black;
   padding-top: 10px;
   margin: 0;
@@ -245,6 +242,10 @@ body ::-webkit-input-placeholder {
 }
 #post-page .comments-container article {
   margin-bottom: 25px;
+}
+#post-page .comments-container h1 {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: #FF7100;
 }
 #post-page .comments-container p {
   margin: 5px;
