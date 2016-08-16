@@ -8,7 +8,12 @@ class PostController extends PageController {
 
 		$this->dbc = $dbc;
 
+		if( isset($_POST['new-comment']) ) {
+			$this->processNewComment();
+		}
+
 		$this->getPostData();
+
 	}
 
 	public function buildHTML() {
@@ -35,5 +40,39 @@ class PostController extends PageController {
 			$this->data['post'] = $result->fetch_assoc();
 		}
 
+		$sql = "SELECT comment, username
+				FROM comments
+				JOIN users
+				ON comments.user_id = users.id
+				WHERE post_id = $postID
+				ORDER BY created_at DESC";
+
+		$result = $this->dbc->query($sql);
+
+		$this->data['allComments'] = $result->fetch_all(MYSQLI_ASSOC);
+
 	}
+
+	private function processNewComment() {
+
+		$totalErrors = 0;
+
+		if( $totalErrors == 0 ) {
+
+			$comment = $this->dbc->real_escape_string( $_POST['comment'] );
+
+			$userID = $_SESSION['id'];
+
+			$postID = $this->dbc->real_escape_string( $_GET['postid'] );
+
+			$sql = "INSERT INTO comments (comment, user_id, post_id)
+					VALUES ('$comment', $userID, $postID)";
+
+			$this->dbc->query($sql);
+
+		}
+
+
+	}
+
 }

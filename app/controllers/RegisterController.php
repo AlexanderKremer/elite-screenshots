@@ -80,12 +80,12 @@ class RegisterController extends PageController {
 		}
 
 		if( strlen($_POST['username']) < 3 ) {
-			$this->usernameMessage = 'Must be at least 3 characters';
+			$this->usernameMessage = 'Username must be at least 3 characters';
 			$totalErrors++;
 		}
 
 		if( strlen($_POST['password']) < 8 ) {
-			$this->passwordMessage = 'Must be at least 8 characters';
+			$this->passwordMessage = 'Password Must be at least 8 characters';
 			$totalErrors++;
 		}
 

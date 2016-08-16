@@ -156,6 +156,10 @@ body {
 	::-webkit-input-placeholder { /* Chrome */
   		color: #ff7100;
 	}
+	p {
+		color: #ff7100;
+		font-family: "Euro Caps", Arial, sans-serif;
+	}
 }
 
 // Bordered container for the Account, Register and Login page
@@ -226,7 +230,6 @@ body {
 			margin: 0;
 		}
 		p {
-			text-transform: uppercase;
 			font-size: 18px;
 			font-family: "Sintony", Arial, sans-serif;
 			color: black;
@@ -303,7 +306,7 @@ body {
 	.comment-button {
 		float: right;
 	}
-	.button {
+	.submit-button {
 		background-color: #FF7100;
 		border: 1px solid #FF7100;
 		color: black;
@@ -312,9 +315,8 @@ body {
 		outline: none;
 		font-family: "Euro Caps", Arial, sans-serif;
 		text-transform: uppercase;
-		margin-bottom: 20px;
 	}
-	.button:hover {
+	.submit-button:hover {
 		background-color: black;
 		color: #FF7100;
 		border: 1px solid #FF7100;

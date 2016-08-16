@@ -23,7 +23,7 @@
               <?= htmlentities($item['title']) ?>
             </a>
           </h1>
-          <a href="">CMDR <?= $item['user_id'] ?></a>
+          <a href="">CMDR <?= $item['username'] ?></a>
         </div>
       </article>
     <?php endforeach ?>

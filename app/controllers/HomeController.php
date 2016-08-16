@@ -25,6 +25,11 @@ class HomeController extends PageController {
 		$sql = "SELECT *
 				FROM uploads";
 
+	// 	$sql = "SELECT *
+			// FROM uploads
+			// JOIN users
+			// ON user_id = users.id";
+
 		$result = $this->dbc->query($sql);
 
 		$allData = $result->fetch_all(MYSQLI_ASSOC);

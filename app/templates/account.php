@@ -39,23 +39,23 @@
 				<div>
 					<label for="title">Title: </label>
 					<input type="text" name="title" id="title" placeholder="Title" class="input-group-field">
-					<?=  isset($titleMessage) ? $titleMessage : '' ?>
+					<p><?=  isset($titleMessage) ? $titleMessage : '' ?></p>
 				</div>
 
 				<div>
 					<label for="desc">Description: </label>
 					<textarea name="desc" id="desc" cols="30" rows="5" placeholder="Description" class="input-group-field"></textarea>
-					<?=  isset($descMessage) ? $descMessage : '' ?>
+					<p><?=  isset($descMessage) ? $descMessage : '' ?></p>
 				</div>
 
 				<div>
 					<label for="image">Image: </label>
 					<input type="file" name="image" id="image" class="input-group-field">
-					<?=  isset($imageMessage) ? $imageMessage : '' ?>
+					<p><?=  isset($imageMessage) ? $imageMessage : '' ?></p>
 				</div>
 
 				<input type="submit" name="new-upload" value="Submit" class="submit-button input-group-field">
-				<?=  isset($uploadMessage) ? $uploadMessage : '' ?>
+				<p><?=  isset($uploadMessage) ? $uploadMessage : '' ?></p>
 
 			</form>
 		</div>

@@ -28,16 +28,34 @@
 			    </ul> -->
 			</div>
 		</div>
-			<div class="add-comments-container ">
-				<textarea name="comment" id="comment" cols="10" rows="3" placeholder="Comment..."></textarea>
-			<div class="comment-button">
-				<input type="submit" class="button" name="new-comment" value="Add Comment">
-			</div>
+			<form action="index.php?page=post&postid=<?= $_GET['postid'] ?>" method="post">
+				<div class="add-comments-container ">
+					<textarea name="comment" id="comment" cols="10" rows="3" placeholder="Comment..."></textarea>
+				<div class="comment-button">
+					<input type="submit" name="new-comment" value="Add Comment" class="submit-button input-group-field">
+				</div>
+			</form>
 		</div>
 	</div>
 
+	
+	
+		<section class="large-3 columns">
+				<div class="comments-container">
+					<h1>Comments: </h1>
 
-	<section class="large-3 columns">
+					<?php foreach($allComments as $comment): ?>
+						<article>
+							<p><?= htmlentities($comment['comment']) ?></p>
+							<small>Written by: <?= htmlentities($comment['username']) ?><a href=""></a></small>
+						</article>
+					<?php endforeach ?>
+
+				</div>
+		</section>	
+
+
+<!-- 	<section class="large-3 columns">
 			<div class="comments-container">
 				<h1>Comments: </h1>
 				<article>
@@ -45,6 +63,6 @@
 					<small>Written by: <a href="">Test</a></small>
 				</article>
 			</div>
-	</section>
+	</section> -->
 
 </div>
