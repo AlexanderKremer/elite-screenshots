@@ -73,7 +73,6 @@ body ::-webkit-input-placeholder {
 }
 #home-page .grid-item {
   width: 32.333%;
-  position: relative;
   display: inline-block;
   column-break-inside: avoid;
   overflow: hidden;

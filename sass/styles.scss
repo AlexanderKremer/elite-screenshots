@@ -76,7 +76,7 @@ body {
 	}
 	.grid-item {
 		width: 32.333%;
-		position: relative;
+		// position: relative;
   		display: inline-block;
   		column-break-inside: avoid;
   		overflow: hidden;
@@ -321,6 +321,10 @@ body {
 		color: #FF7100;
 		border: 1px solid #FF7100;
 	}
+}
+
+#edit-comment-page {
+	
 }
 
 // Footer located in master.php

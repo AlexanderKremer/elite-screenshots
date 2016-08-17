@@ -40,7 +40,7 @@ class PostController extends PageController {
 			$this->data['post'] = $result->fetch_assoc();
 		}
 
-		$sql = "SELECT comment, username
+		$sql = "SELECT comments.id, user_id, comment, username
 				FROM comments
 				JOIN users
 				ON comments.user_id = users.id
