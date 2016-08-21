@@ -40,9 +40,17 @@ class EditPostController extends PageController {
 		if( !$result || $result->num_rows == 0 ) { 
 			header("Location: index.php?page=post&postid=$postID");
 		} else {
-			$this->data['post'] = $result->fetch_assoc();
+			if( isset($_POST['edit-post']) ) {
+				$this->data['post'] =  $_POST;
+				$result = $result->fetch_assoc();
+				$this->data['originalTitle'] = $result['title'];
+			} else {
+				$result = $result->fetch_assoc();
+				$this->data['post'] = $result;
+				
+				$this->data['originalTitle'] = $result['title'];	
+			}
 		}
-
 	}
 
 	private function processUploadEdit() {
@@ -50,7 +58,7 @@ class EditPostController extends PageController {
 		$totalErrors = 0;
 
 		$title = $_POST['title'];
-		$desc = $_POST['desc'];
+		$desc = $_POST['description'];
 
 		if( strlen($title) > 50 ) {
 			$totalErrors++;
