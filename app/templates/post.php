@@ -20,6 +20,20 @@
 				<h2><?= htmlentities($post['title']) ?></h2>
 			    <a href="">CMDR <?= htmlentities($post ['username']) ?></a>
 			    <p><?= htmlentities($post['description']) ?></p>
+
+			    <?php
+			    	if( isset($_SESSION['id']) ){
+
+			    		if( $_SESSION['id'] == $post['user_id'] ) {
+
+			    			?>
+			    		<a href=""><small>Delete</small></a>
+						<a href="index.php?page=edit-post&id=<?= $_GET['postid'] ?>"><small>Edit</small></a>
+							<?php
+			    		}
+
+			    	}
+			    ?>
 <!-- 			    <ul>
 			    	<li>Created: <?= $post['created_at'] ?></li>
 			    	<li>Updated: <?= $post['updated_at'] ?></li>

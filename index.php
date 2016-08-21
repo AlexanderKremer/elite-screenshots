@@ -41,6 +41,11 @@ switch($page) {
 		$controller = new EditCommentController($dbc);
 	break;
 
+	case 'edit-post':
+		require 'app/controllers/EditPostController.php';
+		$controller = new EditPostController($dbc);
+	break;
+
 	case 'logout':
 		unset($_SESSION['id']);
 		unset($_SESSION['privilege']);
