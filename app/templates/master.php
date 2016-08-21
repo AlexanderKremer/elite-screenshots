@@ -12,7 +12,7 @@
     <script src="https://use.fontawesome.com/c9a6fcc362.js"></script>
   </head>
 
-    <nav class="row expanded" data-sticky-container>
+    <nav class="row expanded" data-sticky-container style="height:76px;">
     <div class="sticky" data-sticky data-margin-top="0">
       <div class="columns large-4">
         <a href="index.php?page=home"><img src="img/logo-test.png" alt=""></a>
