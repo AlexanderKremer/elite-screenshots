@@ -24,7 +24,7 @@
 			    <?php
 			    	if( isset($_SESSION['id']) ){
 
-			    		if( $_SESSION['id'] == $post['user_id'] ) {
+			    		if( $_SESSION['id'] == $post['user_id'] || $_SESSION['privilege'] == 'admin' ) {
 
 			    			?>
 			    		<a href=""><small>Delete</small></a>
@@ -64,7 +64,7 @@
 							<?php
 
 								if( isset($_SESSION['id']) ) {
-									if( $_SESSION['id'] == $comment['user_id'] ) {
+									if( $_SESSION['id'] == $comment['user_id'] || $_SESSION['privilege'] == 'admin' ) {
 										echo '<a href=""><small>Delete</small></a>';
 										echo '<a href="index.php?page=edit-comment&id='. $comment['id'].'"><small>Edit</small></a>';
 									}
@@ -76,17 +76,6 @@
 					<?php endforeach ?>
 
 				</div>
-		</section>	
-
-
-<!-- 	<section class="large-3 columns">
-			<div class="comments-container">
-				<h1>Comments: </h1>
-				<article>
-					<p>Test Comment</p>
-					<small>Written by: <a href="">Test</a></small>
-				</article>
-			</div>
-	</section> -->
+		</section>
 
 </div>

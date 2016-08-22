@@ -10,6 +10,8 @@ class RegisterController extends PageController {
 
 		parent::__construct();
 
+		$this->mustBeLoggedOut();
+
 		$this->dbc = $dbc;
 
 		if( isset($_POST['new-account']) ) {

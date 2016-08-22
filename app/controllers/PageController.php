@@ -27,4 +27,14 @@ abstract class PageController {
 
 	}
 
+	public function mustBeLoggedOut() {
+
+		if( isset($_SESSION['id']) ) {
+			// Redirect the user to the login page
+			header('Location: index.php?page=home');
+			die();
+		}
+
+	}
+
 }

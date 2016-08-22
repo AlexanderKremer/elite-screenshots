@@ -36,8 +36,11 @@ class EditPostController extends PageController {
 
 		$sql = "SELECT title, description, image
 				FROM uploads
-				WHERE id = $uploadID
-				AND user_id = $userID";
+				WHERE id = $uploadID ";
+
+		if ($_SESSION['privilege'] != 'admin' ) {
+			$sql .= " AND user_id = $userID";
+		}
 
 		$result = $this->dbc->query($sql);
 		
@@ -135,8 +138,11 @@ class EditPostController extends PageController {
 					SET title = '$title',
 						description = '$desc',
 						image = '$imageName'
-					WHERE id = $uploadID
-					AND user_id = $userID";
+					WHERE id = $uploadID ";
+
+			if ($_SESSION['privilege'] != 'admin' ) {
+			$sql .= " AND user_id = $userID";
+		}
 
 			$this->dbc->query($sql);
 

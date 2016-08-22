@@ -6,6 +6,8 @@ class LoginController extends PageController {
 
 		parent::__construct();
 
+		$this->mustBeLoggedOut();
+
 		$this->dbc = $dbc;
 
 		if( isset( $_POST['login'] ) ) {
