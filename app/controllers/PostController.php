@@ -12,6 +12,10 @@ class PostController extends PageController {
 			$this->deleteUpload();
 		}
 
+		if( isset($_GET['delete-comment']) ) {
+			$this->deleteComment();
+		}
+
 		if( isset($_POST['new-comment']) ) {
 			$this->processNewComment();
 		}
@@ -116,6 +120,17 @@ class PostController extends PageController {
 
 		header('Location: index.php?page=home');
 		die();
+	}
+
+	private function deleteComment() {
+
+		if( !isset($_SESSION['id']) ) {
+			return;
+		}
+		$commentID = $this->dbc->real_escape_string($_GET['commentid']);
+		$userID = $_SESSION['id'];
+		$privilege = $_SESSION['privilege'];
+		
 	}
 
 }
