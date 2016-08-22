@@ -31,6 +31,7 @@
 			  <img src="img/uploads/stream/<?= $post['image'] ?>" alt="">
 
 			  <input type="submit" name="edit-post" class="submit-button input-group-field" value="Submit your changes">
+			  <p><?= isset($updateMessage) ? $updateMessage : '' ?></p>
 
 			</form>
 		</div>

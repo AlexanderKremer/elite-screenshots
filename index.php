@@ -53,7 +53,8 @@ switch($page) {
 	break;
 
 	default:
-		echo $plates->render('error404');
+		require 'app/controllers/Error404Controller.php';
+		$controller = new Error404Controller();
 	break;
 
 }
