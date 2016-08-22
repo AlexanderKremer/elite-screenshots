@@ -27,7 +27,13 @@
 			    		if( $_SESSION['id'] == $post['user_id'] || $_SESSION['privilege'] == 'admin' ) {
 
 			    			?>
-			    		<a href=""><small>Delete</small></a>
+
+			    		<button id="delete-post"><small>Delete</small></button>
+
+			    		<div id="delete-post-options">
+			    			<a href="<?= $_SERVER['REQUEST_URI'] ?>&delete"><small>Yes</small></a> <button><small>No</small></button>
+			    		</div>
+
 						<a href="index.php?page=edit-post&id=<?= $_GET['postid'] ?>"><small>Edit</small></a>
 							<?php
 			    		}
@@ -65,7 +71,10 @@
 
 								if( isset($_SESSION['id']) ) {
 									if( $_SESSION['id'] == $comment['user_id'] || $_SESSION['privilege'] == 'admin' ) {
-										echo '<a href=""><small>Delete</small></a>';
+
+										?>
+										<button id="delete-post"><small>Delete</small></button>
+										<?php
 										echo '<a href="index.php?page=edit-comment&id='. $comment['id'].'"><small>Edit</small></a>';
 									}
 								}
@@ -79,3 +88,17 @@
 		</section>
 
 </div>
+
+<script>
+	
+	$(document).ready(function(){
+
+		$('#delete-post, #delete-post-options button').click(function(){
+
+			$('#delete-post-options').toggle();
+
+		});
+
+	});
+
+</script>

@@ -8,6 +8,10 @@ class PostController extends PageController {
 
 		$this->dbc = $dbc;
 
+		if( isset($_GET['delete']) ) {
+			$this->deleteUpload();
+		}
+
 		if( isset($_POST['new-comment']) ) {
 			$this->processNewComment();
 		}
@@ -72,7 +76,46 @@ class PostController extends PageController {
 
 		}
 
+	}
 
+	private function deleteUpload() {
+
+		if( !isset($_SESSION['id']) ) {
+			return;
+		}
+
+		$postID = $this->dbc->real_escape_string($_GET['postid']);
+		$userID = $_SESSION['id'];
+		$privilege = $_SESSION['privilege'];
+
+		$sql = "SELECT image
+				FROM uploads
+				WHERE id = $postID";
+
+		if( $privilege != 'admin' ) {
+			$sql .= " AND user_id = $userID";
+		}
+
+		$result = $this->dbc->query($sql);
+
+		if ( !$result || $result->num_rows == 0 ) {
+			return;
+		}
+
+		$result = $result->fetch_assoc();
+
+		$filename = $result['image'];
+
+		unlink("img/uploads/original/$filename");
+		unlink("img/uploads/stream/$filename");
+
+		$sql = "DELETE FROM uploads
+				WHERE id = $postID";
+
+		$this->dbc->query($sql);
+
+		header('Location: index.php?page=home');
+		die();
 	}
 
 }

@@ -244,6 +244,13 @@ body {
 				text-decoration: underline;
 			}
 		}
+		small {
+			font-family: "Euro Caps", Arial, sans-serif;
+			color: black;
+		}
+	}
+	#delete-post-options {
+		display: none;
 	}
 	section {
 		margin-bottom: 10px;

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
     <script src="https://use.fontawesome.com/c9a6fcc362.js"></script>
+    <script src="js/vendor/jquery.js"></script>
   </head>
 
     <nav class="row expanded" data-sticky-container style="height:76px;">
@@ -28,10 +29,18 @@
       </div>
       <div class="columns large-4">
         <ul>
-              <li><a href="index.php?page=logout">Log Out</a></li>
-              <li><a href="index.php?page=login">Login</a></li>
-              <li><a href="index.php?page=register">Register</a></li>
-              <li><a href="index.php?page=account">My Account</a></li>
+              <?php if (isset($_SESSION['id'])): ?>
+                <li><a href="index.php?page=logout">Log Out</a></li>
+              <?php endif; ?>
+              
+              <?php if (!isset($_SESSION['id'])): ?>
+                <li><a href="index.php?page=login">Login</a></li>
+                <li><a href="index.php?page=register">Register</a></li>
+              <?php endif; ?>
+
+              <?php if (isset($_SESSION['id'])): ?>
+                <li><a href="index.php?page=account">My Account</a></li>
+              <?php endif; ?>
           </ul>
       </div>
       </div>
@@ -46,7 +55,6 @@
       </div>
     </footer>
 
-    <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>

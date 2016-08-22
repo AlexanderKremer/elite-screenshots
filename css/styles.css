@@ -228,6 +228,13 @@ body ::-webkit-input-placeholder {
   color: red;
   text-decoration: underline;
 }
+#post-page .details-container small {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: black;
+}
+#post-page #delete-post-options {
+  display: none;
+}
 #post-page section {
   margin-bottom: 10px;
   box-sizing: border-box;
