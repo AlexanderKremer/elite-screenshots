@@ -19,11 +19,13 @@
         <a href="index.php?page=home"><img src="img/logo-test.png" alt=""></a>
       </div>
       <div class="columns large-4">
-        <div class="input-group">
-          <input type="search" name="search" placeholder="Search" class="input-group-field">
-            <div class="input-group-button">
-          <input type="submit" class="submit-button">
-        </div>
+       <form action="index.php?page=search" method="post">
+          <div class="input-group">
+            <input type="search" name="search" placeholder="Search" class="input-group-field">
+              <div class="input-group-button">
+            <input type="submit" class="submit-button">
+          </div>
+        </form>
       </div>
         
       </div>
