@@ -127,10 +127,37 @@ class PostController extends PageController {
 		if( !isset($_SESSION['id']) ) {
 			return;
 		}
-		$commentID = $this->dbc->real_escape_string($_GET['commentid']);
+		$commentID = $this->dbc->real_escape_string($_GET['comment']);
 		$userID = $_SESSION['id'];
 		$privilege = $_SESSION['privilege'];
 		
+		$sql = "SELECT comment
+				FROM comments
+				WHERE id = commentID";
+
+		if( $privilege != 'admin' ) {
+			$sql .= " AND user_id = $userID";
+		}
+
+		$result = $this->dbc->query($sql);
+
+		if ( !$result || $result->num_rows == 0 ) {
+			return;
+		}
+
+		$result = $result->fetch_assoc();
+
+		$commentdelete = $result['comment'];
+
+		die($commentdelete);
+
+		// $sql = "DELETE FROM comments
+		// 		WHERE id = $commentID";
+
+		// $this->dbc->query($sql);
+
+		// header('Location: index.php?page=post&postid='.$this->data['post_id']);
+		// die();
 	}
 
 }
