@@ -73,7 +73,12 @@
 									if( $_SESSION['id'] == $comment['user_id'] || $_SESSION['privilege'] == 'admin' ) {
 
 										?>
-										<button id="delete-post"><small>Delete</small></button>
+										<button id="delete-comment"><small>Delete</small></button>
+
+							    		<div id="delete-comment-options">
+							    			<a href="<?= $_SERVER['REQUEST_URI'] ?>&delete-comment"><small>Yes</small></a> <button><small>No</small></button>
+							    		</div>
+
 										<?php
 										echo '<a href="index.php?page=edit-comment&id='. $comment['id'].'"><small>Edit</small></a>';
 									}
@@ -96,6 +101,12 @@
 		$('#delete-post, #delete-post-options button').click(function(){
 
 			$('#delete-post-options').toggle();
+
+		});
+
+		$('#delete-comment, #delete-comment-options button').click(function(){
+
+			$('#delete-comment-options').toggle();
 
 		});
 

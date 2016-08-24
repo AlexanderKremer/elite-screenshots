@@ -288,7 +288,9 @@ body {
 				}
 			}
 		}
-
+		#delete-comment-options {
+			display: none;
+		}
 	}
 	// Comment container scroll bar styling
 	.comments-container::-webkit-scrollbar {

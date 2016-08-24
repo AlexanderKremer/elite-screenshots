@@ -272,6 +272,9 @@ body ::-webkit-input-placeholder {
 #post-page .comments-container small a a:hover {
   text-decoration: underline;
 }
+#post-page .comments-container #delete-comment-options {
+  display: none;
+}
 #post-page .comments-container::-webkit-scrollbar {
   width: 5px;
   height: 50px;

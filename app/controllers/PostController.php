@@ -127,19 +127,44 @@ class PostController extends PageController {
 		if( !isset($_SESSION['id']) ) {
 			return;
 		}
-		$commentID = $this->dbc->real_escape_string($_GET['comment']);
+
+		$commentID = $this->dbc->real_escape_string($_GET['postid']);
 		$userID = $_SESSION['id'];
 		$privilege = $_SESSION['privilege'];
 		
+		// Initial sql comment test
+
 		$sql = "SELECT comment
 				FROM comments
-				WHERE id = commentID";
+				WHERE id = $commentID";
+
+		// $sql = "SELECT comments.id, user_id, comment, username
+		// 		FROM comments
+		// 		JOIN users
+		// 		ON comments.user_id = users.id
+		// 		WHERE post_id = $commentID ";		
+
+// SELECT comments.id, comment FROM comments JOIN users ON comments.user_id = users.id WHERE user_id = 5 AND post_id = 24 AND comments.id = 25
+		
+		// $sql = "SELECT comments.id, comment
+		// 		FROM comments
+		// 		JOIN users ON comments.user_id = users.id
+		// 		WHERE user_id = $userID
+		// 		AND post_id = $commentID
+		// 		AND comments.id = comment ";
 
 		if( $privilege != 'admin' ) {
 			$sql .= " AND user_id = $userID";
 		}
 
+		die($sql);
+
 		$result = $this->dbc->query($sql);
+
+		// echo '<pre>';
+		// print_r($result);
+		// die();
+
 
 		if ( !$result || $result->num_rows == 0 ) {
 			return;
@@ -149,7 +174,7 @@ class PostController extends PageController {
 
 		$commentdelete = $result['comment'];
 
-		die($commentdelete);
+		// die($commentdelete);
 
 		// $sql = "DELETE FROM comments
 		// 		WHERE id = $commentID";

@@ -37,6 +37,7 @@ class EditCommentController extends PageController {
 		if ($_SESSION['privilege'] != 'admin' ) {
 			$sql .= " AND user_id = $userID";
 		}
+		die($sql);
 
 
 		$result = $this->dbc->query( $sql );
