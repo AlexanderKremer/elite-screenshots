@@ -10,7 +10,7 @@
 <body id="account-page">
 
 <div class="center-container">
-	<div class="row align-center large-5 text-center">
+<!-- 	<div class="row align-center large-5 text-center">
 		<div class="border-container">
 		<h1>CMDR details</h1>
 			<form action="index.php?page=home" method="post">
@@ -30,7 +30,7 @@
 			  <input type="submit" class="submit-button input-group-field">
 			</form>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="row align-center large-5 text-center">
 		<div class="border-container">
