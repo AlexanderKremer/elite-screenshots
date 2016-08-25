@@ -333,8 +333,63 @@ body {
 	}
 }
 
+#edit-post-page {
+	h1 {
+		font-family: "Euro Caps", Arial, sans-serif;
+		color: #FF7100;
+	}
+	::-webkit-input-placeholder { /* Chrome */
+  		color: #ff7100;
+	}
+	p {
+		color: #ff7100;
+		font-family: "Euro Caps", Arial, sans-serif;
+	}	
+}
+
 #edit-comment-page {
-	
+	h1 {
+		font-family: "Euro Caps", Arial, sans-serif;
+		color: #FF7100;
+	}
+	::-webkit-input-placeholder { /* Chrome */
+  		color: #ff7100;
+	}
+	p {
+		color: #ff7100;
+		font-family: "Euro Caps", Arial, sans-serif;
+	}
+	footer {
+	clear: both;
+    position: fixed;
+    bottom: 0px;
+    margin-bottom: 50px;
+    width: 100%;		
+	}
+}
+
+#search-page {
+	h1 {
+		font-family: "Euro Caps", Arial, sans-serif;
+		color: #FF7100;
+	}
+	::-webkit-input-placeholder { /* Chrome */
+  		color: #ff7100;
+	}
+	p {
+		color: #ff7100;
+		font-family: "Euro Caps", Arial, sans-serif;
+	}
+	a {
+		color: #FF7100;
+		font-family: "Euro Caps", Arial, sans-serif;
+		a:hover {
+			text-decoration: underline;
+		}
+	}	
+	hr {
+		border-color: #FF7100;
+	}
 }
 
 // Footer located in master.php

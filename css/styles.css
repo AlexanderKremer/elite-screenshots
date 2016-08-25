@@ -310,6 +310,62 @@ body ::-webkit-input-placeholder {
   border: 1px solid #FF7100;
 }
 
+#edit-post-page h1 {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: #FF7100;
+}
+#edit-post-page ::-webkit-input-placeholder {
+  /* Chrome */
+  color: #ff7100;
+}
+#edit-post-page p {
+  color: #ff7100;
+  font-family: "Euro Caps", Arial, sans-serif;
+}
+
+#edit-comment-page h1 {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: #FF7100;
+}
+#edit-comment-page ::-webkit-input-placeholder {
+  /* Chrome */
+  color: #ff7100;
+}
+#edit-comment-page p {
+  color: #ff7100;
+  font-family: "Euro Caps", Arial, sans-serif;
+}
+#edit-comment-page footer {
+  clear: both;
+  position: fixed;
+  bottom: 0px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+#search-page h1 {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: #FF7100;
+}
+#search-page ::-webkit-input-placeholder {
+  /* Chrome */
+  color: #ff7100;
+}
+#search-page p {
+  color: #ff7100;
+  font-family: "Euro Caps", Arial, sans-serif;
+}
+#search-page a {
+  color: #FF7100;
+  font-family: "Euro Caps", Arial, sans-serif;
+}
+#search-page a a:hover {
+  text-decoration: underline;
+}
+#search-page hr {
+  border-color: #FF7100;
+}
+
 footer {
   border-top: 1px solid #FF7100;
 }

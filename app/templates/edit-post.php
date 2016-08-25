@@ -18,11 +18,11 @@
 			<form action="index.php?page=edit-post&id=<?= $_GET['id'] ?>" method="post" enctype="multipart/form-data">
 
 			  <div class="row align-center">
-			    <div class="large-6 columns large-centered">
-			    	<input type="text" name="title" value="<?= $post['title'] ?>"></input>
+			    <div class="large-10 columns large-centered">
+			    	<input type="text" name="title" class="input-group-field" value="<?= $post['title'] ?>"></input>
 			    	<p><?=  isset($titleError) ? $titleError : '' ?></p>
 
-			  		<textarea name="description" id="desc" cols="10" rows="3"><?= $post['description'] ?></textarea>
+			  		<textarea name="description" id="desc" cols="10" rows="3" class="input-group-field"><?= $post['description'] ?></textarea>
 			  		<p><?=  isset($descError) ? $descError : '' ?></p>
 			    </div>
 			    <input type="file" name="image">
