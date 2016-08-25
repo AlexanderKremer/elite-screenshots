@@ -7,7 +7,7 @@
 
 ?>
 
-<body id="error-404-page">
+<body id="error-page">
 
 <div class="center-container">
 	<div class="row align-center large-5 text-center">

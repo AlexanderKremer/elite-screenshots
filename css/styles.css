@@ -188,6 +188,7 @@ body ::-webkit-input-placeholder {
 }
 
 #post-page p {
+  font-family: "Euro Caps", Arial, sans-serif;
   color: #FF7100;
 }
 #post-page small {
@@ -196,6 +197,10 @@ body ::-webkit-input-placeholder {
 #post-page .post-container {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+#post-page .post-container p {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: #FF7100;
 }
 #post-page .picture-container {
   padding: 0;
@@ -272,7 +277,7 @@ body ::-webkit-input-placeholder {
 #post-page .comments-container small a a:hover {
   text-decoration: underline;
 }
-#post-page .comments-container #delete-comment-options {
+#post-page .comments-container .delete-comment-options {
   display: none;
 }
 #post-page .comments-container::-webkit-scrollbar {
@@ -367,6 +372,15 @@ body ::-webkit-input-placeholder {
 }
 #search-page hr {
   border-color: #FF7100;
+}
+
+#error-page h1 {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: #FF7100;
+}
+#error-page h2 {
+  font-family: "Euro Caps", Arial, sans-serif;
+  color: #FF7100;
 }
 
 footer {

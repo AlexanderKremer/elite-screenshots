@@ -49,6 +49,7 @@
 			<form action="index.php?page=post&postid=<?= $_GET['postid'] ?>" method="post">
 				<div class="add-comments-container ">
 					<textarea name="comment" id="comment" cols="10" rows="3" placeholder="Comment..."></textarea>
+					<p><?=  isset($commentMessage) ? $commentMessage : '' ?></p>
 				<div class="comment-button">
 					<input type="submit" name="new-comment" value="Add Comment" class="submit-button input-group-field">
 				</div>
@@ -73,9 +74,9 @@
 									if( $_SESSION['id'] == $comment['user_id'] || $_SESSION['privilege'] == 'admin' ) {
 
 										?>
-										<button id="delete-comment"><small>Delete</small></button>
+										<button class="delete-comment"><small>Delete</small></button>
 
-							    		<div id="delete-comment-options">
+							    		<div class="delete-comment-options">
 							    			<a href="<?= $_SERVER['REQUEST_URI'] ?>&delete-comment=<?= $comment['id'] ?>"><small>Yes</small></a> <button><small>No</small></button>
 							    		</div>
 
@@ -104,11 +105,20 @@
 
 		});
 
-		$('#delete-comment, #delete-comment-options button').click(function(){
-
-			$('#delete-comment-options').toggle();
-
+		$('.delete-comment').click(function(){
+			$(this).parent().children('.delete-comment-options').toggle();
 		});
+
+		$('.delete-comment-options button').click(function(){
+			
+			// $(this)
+			console.log($(this).children().parent('.delete-comment'));
+			$(this).children().parent('.delete-comment').toggle();
+			
+			// console.log($(this).parent().children('.delete-comment'));
+			// $(this).children().parent('.delete-comment-options').toggle();
+		});
+
 
 	});
 

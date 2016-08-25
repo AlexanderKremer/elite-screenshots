@@ -65,6 +65,21 @@ class PostController extends PageController {
 
 		$totalErrors = 0;
 
+		if( !isset($_SESSION['id']) ) {
+			$this->data['commentMessage'] = '<p>You must be signed in to comment</p>';
+			return;
+		}
+
+		$comment = trim($_POST['comment']);
+
+		if ( strlen($comment) == 0 ) {
+			$this->data['commentMessage'] = '<p>Cannot add a blank comment</p>';
+			$totalErrors++;
+		} elseif( strlen( $comment ) > 250 ) {
+			$this->data['commentMessage'] = '<p>Cannot be more than 250 characters</p>';
+			$totalErrors++;
+		}
+
 		if( $totalErrors == 0 ) {
 
 			$comment = $this->dbc->real_escape_string( $_POST['comment'] );

@@ -7,7 +7,6 @@ class SearchController extends PageController{
 		parent::__construct();
 
 		$this->dbc = $dbc;
-		$this->mustBeLoggedIn();
 		$this->getSearch();
 
 	}

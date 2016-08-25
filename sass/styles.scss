@@ -203,6 +203,7 @@ body {
 
 #post-page {
 	p {
+		font-family: "Euro Caps", Arial, sans-serif;
 		color: #FF7100;
 	}
 	small {
@@ -211,6 +212,10 @@ body {
 	.post-container {
 		margin-top: 15px;
 		margin-bottom: 15px;
+		p {
+			font-family: "Euro Caps", Arial, sans-serif;
+			color: #FF7100;
+		}
 	}
 	.picture-container {
 		
@@ -288,7 +293,7 @@ body {
 				}
 			}
 		}
-		#delete-comment-options {
+		.delete-comment-options {
 			display: none;
 		}
 	}
@@ -392,6 +397,17 @@ body {
 	}	
 	hr {
 		border-color: #FF7100;
+	}
+}
+
+#error-page {
+	h1 {
+		font-family: "Euro Caps", Arial, sans-serif;
+		color: #FF7100;
+	}
+	h2 {
+		font-family: "Euro Caps", Arial, sans-serif;
+		color: #FF7100;		
 	}
 }
 
