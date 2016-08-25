@@ -41,7 +41,7 @@
               <?php endif; ?>
 
               <?php if (isset($_SESSION['id'])): ?>
-                <li><a href="index.php?page=account">My Account</a></li>
+                <li><a href="index.php?page=account"><?= $_SESSION['username']?></a></li>
               <?php endif; ?>
           </ul>
       </div>

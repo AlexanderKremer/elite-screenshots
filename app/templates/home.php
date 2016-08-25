@@ -28,34 +28,4 @@
       </article>
     <?php endforeach ?>
 
-    <!-- <article class="grid-item">
-      <a href="index.php?page=post">
-        <img src="img/test1.jpg" alt="">
-      </a>
-        <div class="upload-container">
-          <h1>
-              <a href="#">test</a>
-          </h1>
-          <a href="">CMDR test</a>
-        </div>
-
-    </article>
-
-    <article class="grid-item">
-      <a href="index.php?page=post&postid=<?= $item['id'] ?>">
-        <img src="img/uploads/stream/<?= $item['image'] ?>" alt="">
-      </a>
-      <div class="upload-container">
-        <h1>
-          <a href="index.php?page=post&postid=<?= $item['id'] ?>">
-            <?= htmlentities($item['title']) ?>
-          </a>
-        </h1>
-        <a href="">CMDR <?= $item['user_id'] ?></a>
-      </div>
-
-    </article> -->
-
-
-
   </div>

@@ -77,7 +77,6 @@
 
 							    		<div id="delete-comment-options">
 							    			<a href="<?= $_SERVER['REQUEST_URI'] ?>&delete-comment=<?= $comment['id'] ?>"><small>Yes</small></a> <button><small>No</small></button>
-							    			<!-- <a href="<?= $_SERVER['REQUEST_URI'] ?>&delete-comment"><small>Yes</small></a> <button><small>No</small></button> -->
 							    		</div>
 
 										<?php

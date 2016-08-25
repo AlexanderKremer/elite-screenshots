@@ -45,7 +45,7 @@ class LoginController extends PageController {
 
 			$filteredUsername = $this->dbc->real_escape_string( $_POST['username'] );
 
-			$sql = "SELECT id, password, privilege
+			$sql = "SELECT id, password, privilege, username
 					FROM users
 					WHERE username = '$filteredUsername'  ";
 
@@ -61,6 +61,7 @@ class LoginController extends PageController {
 
 					$_SESSION['id'] = $userData['id'];
 					$_SESSION['privilege'] = $userData['privilege'];
+					$_SESSION['username'] = $userData['username'];
 
 					header('Location: index.php?page=home');
 

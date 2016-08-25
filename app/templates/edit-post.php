@@ -25,7 +25,7 @@
 			  		<textarea name="description" id="desc" cols="10" rows="3" class="input-group-field"><?= $post['description'] ?></textarea>
 			  		<p><?=  isset($descError) ? $descError : '' ?></p>
 			    </div>
-			    <input type="file" name="image">
+			    <input type="file" name="image" class="input-group-field">
 			  </div>
 
 			  <img src="img/uploads/stream/<?= $post['image'] ?>" alt="">
