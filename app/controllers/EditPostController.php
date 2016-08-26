@@ -71,7 +71,10 @@ class EditPostController extends PageController {
 		$title = trim($_POST['title']);
 		$desc = trim($_POST['description']);
 
-		if( strlen($title) > 50 ) {
+		if( strlen($title) == 0 ) {
+			$totalErrors++;
+			$this->data['titleError'] = 'Title is Required to edit';
+		} elseif( strlen($title) > 50 ) {
 			$totalErrors++;
 			$this->data['titleError'] = '50 characters max for title length';
 		}

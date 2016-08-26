@@ -34,7 +34,7 @@ class AccountController extends PageController {
 		$desc  = trim($_POST['desc']);
 
 		if ( strlen($title) == 0 ) {
-			$this->data['titleMessage'] = '<p>Required</p>';
+			$this->data['titleMessage'] = '<p>A title is required to upload an image</p>';
 			$totalErrors++;
 		} elseif( strlen( $title ) > 50 ) {
 			$this->data['titleMessage'] = '<p>Cannot be more than 50 characters</p>';

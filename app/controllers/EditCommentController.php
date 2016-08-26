@@ -56,7 +56,10 @@ class EditCommentController extends PageController {
 
 		$totalErrors = 0;
 
-		if( strlen($_POST['comment']) > 250 ) {
+		if( strlen($_POST['comment']) < 0 ) {
+			$totalErrors++;
+			$this->data['commentError'] = 'You must have a comment to edit';
+		} if( strlen($_POST['comment']) > 250 ) {
 			$totalErrors++;
 			$this->data['commentError'] = 'Must be less than 250 characters in length';
 		}
