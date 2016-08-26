@@ -150,6 +150,24 @@ body ::-webkit-input-placeholder {
   color: #ff7100;
   font-family: "Euro Caps", Arial, sans-serif;
 }
+#account-page input[type="file"] {
+  display: none;
+}
+#account-page label {
+  background-color: #FF7100;
+  border: 1px solid #FF7100;
+  color: black;
+  height: 40px;
+  padding: 0 15px 0 15px;
+  outline: none;
+  font-family: "Euro Caps", Arial, sans-serif;
+  text-transform: uppercase;
+}
+#account-page label:hover {
+  background-color: black;
+  color: #FF7100;
+  border: 1px solid #FF7100;
+}
 
 .center-container .border-container {
   border: 1px solid #FF7100;
@@ -164,6 +182,7 @@ body ::-webkit-input-placeholder {
   background-color: black;
   border: 1px solid #FF7100;
   color: #FF7100;
+  font-family: "Euro Caps", Arial, sans-serif;
 }
 .center-container .input-group-field:focus {
   background-color: black;
@@ -330,6 +349,24 @@ body ::-webkit-input-placeholder {
 #edit-post-page img {
   padding-bottom: 15px;
 }
+#edit-post-page input[type="file"] {
+  display: none;
+}
+#edit-post-page label {
+  background-color: #FF7100;
+  border: 1px solid #FF7100;
+  color: black;
+  height: 40px;
+  padding: 0 15px 0 15px;
+  outline: none;
+  font-family: "Euro Caps", Arial, sans-serif;
+  text-transform: uppercase;
+}
+#edit-post-page label:hover {
+  background-color: black;
+  color: #FF7100;
+  border: 1px solid #FF7100;
+}
 
 #edit-comment-page h1 {
   font-family: "Euro Caps", Arial, sans-serif;
@@ -381,6 +418,10 @@ body ::-webkit-input-placeholder {
 #error-page h2 {
   font-family: "Euro Caps", Arial, sans-serif;
   color: #FF7100;
+}
+#error-page .center-container {
+  padding: 50px 0;
+  margin: 50px 0;
 }
 
 footer {

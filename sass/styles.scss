@@ -160,6 +160,24 @@ body {
 		color: #ff7100;
 		font-family: "Euro Caps", Arial, sans-serif;
 	}
+	input[type="file"] {
+	    display: none;
+	}
+	label {
+		background-color: #FF7100;
+		border: 1px solid #FF7100;
+		color: black;
+		height: 40px;
+		padding: 0 15px 0 15px;
+		outline: none;
+		font-family: "Euro Caps", Arial, sans-serif;
+		text-transform: uppercase;
+	}
+	label:hover {
+		background-color: black;
+		color: #FF7100;
+		border: 1px solid #FF7100;		
+	}
 }
 
 // Bordered container for the Account, Register and Login page
@@ -177,6 +195,7 @@ body {
 		background-color: black;
 		border: 1px solid #FF7100;
 		color: #FF7100;
+		font-family: "Euro Caps", Arial, sans-serif;
 	}
 	.input-group-field:focus {
 		background-color: black;
@@ -352,7 +371,25 @@ body {
 	}
 	img {
 		padding-bottom: 15px;
-	}	
+	}
+	input[type="file"] {
+	    display: none;
+	}
+	label {
+		background-color: #FF7100;
+		border: 1px solid #FF7100;
+		color: black;
+		height: 40px;
+		padding: 0 15px 0 15px;
+		outline: none;
+		font-family: "Euro Caps", Arial, sans-serif;
+		text-transform: uppercase;
+	}
+	label:hover {
+		background-color: black;
+		color: #FF7100;
+		border: 1px solid #FF7100;		
+	}
 }
 
 #edit-comment-page {
@@ -408,6 +445,10 @@ body {
 	h2 {
 		font-family: "Euro Caps", Arial, sans-serif;
 		color: #FF7100;		
+	}
+	.center-container {
+		padding: 50px 0;
+		margin: 50px 0;
 	}
 }
 

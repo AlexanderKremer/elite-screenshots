@@ -102,7 +102,7 @@ class RegisterController extends PageController {
 
 			$_SESSION['id'] = $this->dbc->insert_id;
 			$_SESSION['privilege'] = 'user';
-			$_SESSION['username'] = $userData['username'];
+			$_SESSION['username'] = $filteredUsername;
 			
 			header('Location: index.php?page=home');
 

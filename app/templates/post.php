@@ -112,9 +112,9 @@
 		$('.delete-comment-options button').click(function(){
 			
 			// $(this)
-			console.log($(this).children().parent('.delete-comment'));
-			$(this).children().parent('.delete-comment').toggle();
 			
+			
+			$(this).parent().toggle();
 			// console.log($(this).parent().children('.delete-comment'));
 			// $(this).children().parent('.delete-comment-options').toggle();
 		});

@@ -28,8 +28,10 @@
 			  </div>
 
 			  <img src="img/uploads/stream/<?= $post['image'] ?>" alt="">
-			  
-			  <input type="file" name="image" class="input-group-field">
+
+			  <label for="file" name="image" class="custom-file-upload input-group-field">Choose image</label>
+
+			  <input type="file" name="image" id="file">
 			  <p><?=  isset($imageMessage) ? $imageMessage : '' ?></p>
 
 			  <input type="submit" name="edit-post" class="submit-button input-group-field" value="Submit your changes">
