@@ -41,10 +41,7 @@ class AccountController extends PageController {
 			$totalErrors++;
 		}
 
-		if( strlen( $desc ) == 0 ) {
-			$this->data['descMessage'] = '<p>Required</p>';
-			$totalErrors++;
-		} elseif( strlen( $desc ) > 400 ) {
+		if( strlen( $desc ) > 400 ) {
 			$this->data['descMessage'] = '<p>Cannot bemore than 400 characters</p>';
 			$totalErrors++;
 		}
