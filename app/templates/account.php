@@ -13,15 +13,39 @@
 
 	<div class="row align-center large-5 text-center">
 		<div class="border-container">
+			<h1>Account details</h1>
+			<form action="index.php?page=account" method="post">
+				<div>
+					<input type="text" name="email" placeholder="Change Email" class="input-group-field">
+					<p><?=  isset($emailMessage) ? $emailMessage : '' ?></p>
+				</div>
+
+				<div>
+					<input type="password" name="password" class="input-group-field" placeholder="Change Password">
+					<p><?=  isset($passwordMessage) ? $passwordMessage : '' ?></p>
+				</div>
+
+				<div>
+					<input type="password" name="password" class="input-group-field" placeholder="Confirm Password">
+					<p><?=  isset($passwordMessage) ? $passwordMessage : '' ?></p>
+				</div>
+
+				<input type="submit" name="new-details" value="Submit" class="submit-button input-group-field">
+			</form>
+		</div>
+	</div>
+
+	<div class="row align-center large-5 text-center">
+		<div class="border-container">
 			<h1>Create new post</h1>
 			<form action="index.php?page=account" method="post" enctype="multipart/form-data">
 				<div>
-					<input type="text" name="title" id="title" placeholder="Title" class="input-group-field">
+					<input type="text" name="title" id="title" placeholder="Title" value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>" class="input-group-field">
 					<p><?=  isset($titleMessage) ? $titleMessage : '' ?></p>
 				</div>
 
 				<div>
-					<textarea name="desc" id="desc" cols="30" rows="5" placeholder="Description" class="input-group-field"></textarea>
+					<textarea name="desc" id="desc" cols="30" rows="5" placeholder="Description" value="<?= isset($_POST['desc']) ? $_POST['desc'] : '' ?>" class="input-group-field"></textarea>
 					<p><?=  isset($descMessage) ? $descMessage : '' ?></p>
 				</div>
 
