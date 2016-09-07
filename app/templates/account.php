@@ -45,7 +45,8 @@
 				</div>
 
 				<div>
-					<textarea name="desc" id="desc" cols="30" rows="5" placeholder="Description" value="<?= isset($_POST['desc']) ? $_POST['desc'] : '' ?>" class="input-group-field"></textarea>
+					<textarea name="desc" id="desc" cols="30" rows="5" placeholder="Description" class="input-group-field"><?= isset($_POST['desc']) ? $_POST['desc'] : '' ?></textarea>
+					<!-- <textarea name="desc" id="desc" cols="30" rows="5" placeholder="Description" value="<?= isset($_POST['desc']) ? $_POST['desc'] : '' ?>" class="input-group-field"></textarea> -->
 					<p><?=  isset($descMessage) ? $descMessage : '' ?></p>
 				</div>
 
