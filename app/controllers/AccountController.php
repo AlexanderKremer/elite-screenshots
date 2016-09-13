@@ -86,8 +86,10 @@ class AccountController extends PageController {
 
 			$this->dbc->query( $sql );
 
+			$newPostID = $this->dbc->insert_id;
+
 			if( $this->dbc->affected_rows ) {
-				$this->data['uploadMessage'] = 'Image uploaded Successfully!';
+				header("Location: index.php?page=post&postid=$newPostID");
 			} else {
 				$this->data['uploadMessage'] = 'Image failed to upload!';
 			}
