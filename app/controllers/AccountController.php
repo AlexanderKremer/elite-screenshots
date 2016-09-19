@@ -14,6 +14,14 @@ class AccountController extends PageController {
 
 		$this->mustBeLoggedIn();
 
+		if( isset($_POST['update-email']) ) {
+			$this->validateEmailForm();
+		}
+
+		if( isset($_POST['update-password']) ) {
+			$this->validatePasswordForm();
+		}
+
 		if( isset($_POST['new-upload']) ) {
 			$this->processNewUpload();
 		}
@@ -23,6 +31,66 @@ class AccountController extends PageController {
 	public function buildHTML() {
 
 	echo $this->plates->render('account', $this->data);
+
+	}
+
+	private function validateEmailForm() {
+
+		$userID = $_SESSION['id'];
+		$email = $_POST["email"];
+
+		$totalErrors = 0;
+
+		if( strlen($_POST['email']) == 0 ) {
+			$this->data['emailMessage'] = 'No new E-mail entered';
+			$totalErrors++;
+		}
+
+		if( $totalErrors == 0 ) {
+
+			$sql = "UPDATE users SET email = '$email' WHERE id = $userID";
+			
+			die($sql);
+
+			$this->dbc->query($sql);
+
+			$this->data['emailMessage'] = 'E-mail Updated';
+			header('Location: index.php?page=account');
+
+		}
+
+	}
+
+	private function validatePasswordForm() {
+
+		$userID = $_SESSION['id'];
+		$password = $_POST["password"];
+
+		$totalErrors = 0;
+
+		if( strlen($_POST['password']) < 8 ) {
+			$this->data['passwordMessage'] = 'New Password Must be at least 8 characters';
+			$totalErrors++;
+		}
+
+
+		if( $totalErrors == 0 ) {
+
+			$hash = password_hash( $_POST['password'], PASSWORD_BCRYPT );
+
+			// $sql = "UPDATE users SET password = '$password' WHERE id = $userID";
+			// $sql = "UPDATE users SET password = '$password' WHERE id = $userID VALUES ('$hash')";
+			// $sql = "UPDATE users SET (password) = '$password' WHERE id = $userID VALUES ('$hash')";
+			$sql = "UPDATE users SET password = '$hash' WHERE id = $userID";
+
+			
+
+			$this->dbc->query($sql);
+
+			$this->data['passwordMessage'] = 'Password Updated';
+			header('Location: index.php?page=account');
+
+		}
 
 	}
 

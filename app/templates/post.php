@@ -46,14 +46,17 @@
 			    </ul> -->
 			</div>
 		</div>
+			<?php if (isset($_SESSION['id'])): ?>
 			<form action="index.php?page=post&postid=<?= $_GET['postid'] ?>" method="post">
 				<div class="add-comments-container ">
+				
 					<textarea name="comment" id="comment" cols="10" rows="3" placeholder="Comment..."></textarea>
 					<p><?=  isset($commentMessage) ? $commentMessage : '' ?></p>
 				<div class="comment-button">
 					<input type="submit" name="new-comment" value="Add Comment" class="submit-button input-group-field">
 				</div>
 			</form>
+			<?php endif; ?>
 		</div>
 	</div>
 

@@ -16,21 +16,19 @@
 			<h1>Account details</h1>
 			<form action="index.php?page=account" method="post">
 				<div>
-					<input type="text" name="email" placeholder="Change Email" class="input-group-field">
+					<input type="text" name="email" placeholder="Change Email" class="input-group-field" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>">
 					<p><?=  isset($emailMessage) ? $emailMessage : '' ?></p>
 				</div>
 
+				<input type="submit" name="update-email" value="Update Email" class="submit-button input-group-field">
+
 				<div>
+					<br>
 					<input type="password" name="password" class="input-group-field" placeholder="Change Password">
 					<p><?=  isset($passwordMessage) ? $passwordMessage : '' ?></p>
 				</div>
 
-				<div>
-					<input type="password" name="password" class="input-group-field" placeholder="Confirm Password">
-					<p><?=  isset($passwordMessage) ? $passwordMessage : '' ?></p>
-				</div>
-
-				<input type="submit" name="new-details" value="Submit" class="submit-button input-group-field">
+				<input type="submit" name="update-password" value="Update Password" class="submit-button input-group-field">
 			</form>
 		</div>
 	</div>
