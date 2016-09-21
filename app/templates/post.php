@@ -49,6 +49,7 @@
 
 			<?php if (!isset($_SESSION['id'])): ?>
 				<div class="add-comments-container ">
+				<p>Must be logged in to comment</p>
 			<?php endif; ?>
 
 			<?php if (isset($_SESSION['id'])): ?>
