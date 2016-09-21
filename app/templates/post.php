@@ -46,6 +46,11 @@
 			    </ul> -->
 			</div>
 		</div>
+
+			<?php if (!isset($_SESSION['id'])): ?>
+				<div class="add-comments-container ">
+			<?php endif; ?>
+
 			<?php if (isset($_SESSION['id'])): ?>
 			<form action="index.php?page=post&postid=<?= $_GET['postid'] ?>" method="post">
 				<div class="add-comments-container ">

@@ -55,8 +55,8 @@ class AccountController extends PageController {
 			$this->dbc->query($sql);
 
 			$this->data['emailMessage'] = 'E-mail Updated';
-			header('Location: index.php?page=account');
-
+			// header('Location: index.php?page=account');
+			return;
 		}
 
 	}
@@ -88,7 +88,8 @@ class AccountController extends PageController {
 			$this->dbc->query($sql);
 
 			$this->data['passwordMessage'] = 'Password Updated';
-			header('Location: index.php?page=account');
+			// header('Location: index.php?page=account');
+			return;
 
 		}
 
