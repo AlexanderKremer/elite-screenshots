@@ -1,6 +1,0 @@
-{
-    "require": {
-        "league/plates": "^3.1",
-        "intervention/image": "^2.3"
-    }
-}
