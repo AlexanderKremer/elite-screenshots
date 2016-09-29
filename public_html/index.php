@@ -2,12 +2,13 @@
 
 session_start();
 
+require '../config.inc.php';
 require 'vendor/autoload.php';
 require 'app/controllers/PageController.php';
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-$dbc = new mysqli('localhost', 'root', '', 'elite_screenshots');
+$dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 switch($page) {
 
