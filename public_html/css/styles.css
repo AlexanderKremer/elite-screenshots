@@ -18,7 +18,7 @@ nav .input-group {
   line-height: 75px;
 }
 nav .input-group .input-group-field {
-  font-family: "Euro Caps" Arial, sans-serif;
+  font-family: "Euro Caps", Arial, sans-serif;
   background-color: black;
   border: 1px solid #FF7100;
   color: #FF7100;
