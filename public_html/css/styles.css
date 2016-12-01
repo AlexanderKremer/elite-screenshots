@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Euro Caps";
-  src: url("fonts/eurocaps.TTF");
+  src: url("../fonts/eurocaps.TTF");
   font-family: "Sintony";
-  src: url("fonts/Sintony-Regular.otf");
+  src: url("../fonts/Sintony-Regular.otf");
 }
 nav {
   background-color: black;
@@ -16,6 +16,7 @@ nav .input-group {
   line-height: 75px;
 }
 nav .input-group .input-group-field {
+  font-family: "Euro Caps" Arial, sans-serif;
   background-color: black;
   border: 1px solid #FF7100;
   color: #FF7100;
