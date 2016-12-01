@@ -1,6 +1,8 @@
 @font-face {
   font-family: "Euro Caps";
   src: url("../fonts/eurocaps.TTF");
+}
+@font-face {
   font-family: "Sintony";
   src: url("../fonts/Sintony-Regular.otf");
 }
